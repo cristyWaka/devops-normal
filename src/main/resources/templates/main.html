@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Dogs page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></link>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"></link>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  	<h1 class="text-center">My awesome dogs page!</h1>
+  	<h3 class="text-center">Welcome to my first web page of dogs</h3>
+	<div class="container" style="margin-top:5rem;">
+		<div class="row">
+			<div class="col-md-6">
+				<p><b>Test 1</b> (Random image)</p>
+				<img th:src="${random}"/>
+			</div>
+			<div class="col-md-6">
+				<p><b>Test 2</b> (Breeds list)</p>
+			    <table>
+					<tr>
+						<th>Available breeds</th>
+					</tr>
+					<tr th:each="breed : ${breed_list}">
+						<td th:text="${breed}"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<h4 class="text-center">Do not buy a dog, just adopt them ;)</h4>
+  </body>
+
+</html>
