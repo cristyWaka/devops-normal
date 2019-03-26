@@ -16,10 +16,13 @@ public class OperationsTests {
 	@Test
 	public void testRandom() {
 		// Instantiate DogsOperations class
+		DogsOperations dop = new DogsOperations();
 		
 		// Call getRandomDogImage operation and store the result on String
+		String image = dop.getRandomDogImage();
 		
 		// Assert true if the result string ends with '.jpg'
+		assertTrue(image.endsWith(".jpg"));
 	}
 	
 	/**
@@ -28,9 +31,12 @@ public class OperationsTests {
 	@Test
 	public void breedsList() {
 		// Instantiate DogsOperations class
+		DogsOperations dop = new DogsOperations();
 		
 		// Call getBreedList operation and store the result on ArrayList
+		ArrayList<String> breeds = dop.getBreedList();
 		
 		// Assert true if the result ArrayList has size of more than 0
+		assertTrue(breeds.size()>0);
 	}
 }
